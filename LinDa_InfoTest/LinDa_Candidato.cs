@@ -43,13 +43,11 @@ namespace LinDa_InfoTest
             LinDa_Nome = nome;
         }
 
-        public virtual bool isIdoneo()
-        {
-            return ;
-        }
-        public virtual int punteggio()
-        {
-            return ;
-        }
+        public abstract bool isIdoneo();
+        
+        public abstract int punteggio();
+        
+            
+       
     }
 }
