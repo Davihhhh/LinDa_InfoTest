@@ -31,14 +31,14 @@ namespace LinDa_InfoTest
         }
         public LinDa_Disoccupato() : base()
         {
-            LinDa_voto = 0;
-            LinDa_lode = false;
+            LinDa_Voto = 0;
+            LinDa_Lode = false;
         }
         
         public LinDa_Disoccupato(int matricola, string nome, int linDa_voto, bool linDa_lode) : base (matricola, nome)
         {
-            LinDa_voto = linDa_voto;
-            LinDa_lode = linDa_lode;           
+            LinDa_Voto = linDa_voto;
+            LinDa_Lode = linDa_lode;           
         }
 
 
