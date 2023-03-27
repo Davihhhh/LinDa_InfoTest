@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LinDa_InfoTest
 {
-    public abstract class LinDa_Candidato
+    public abstract class LinDa_Candidato : IEquatable<LinDa_Candidato>
     {
         private int LinDa_matricola;
         private string LinDa_nome;

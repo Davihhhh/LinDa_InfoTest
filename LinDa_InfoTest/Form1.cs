@@ -16,7 +16,7 @@ namespace LinDa_InfoTest
             disoccupato = new LinDa_Disoccupato(10, "davide", 110, true);
             disoccupato2 = new LinDa_Disoccupato(10, "davide", 10, true);
             lavoratore = new LinDa_Lavoratore(5, "davide", 5);
-            textBox1.Text = disoccupato.HashCode().ToString();
+            textBox1.Text = disoccupato.CompareTo(lavoratore).ToString();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
