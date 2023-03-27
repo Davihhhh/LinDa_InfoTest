@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LinDa_InfoTest
 {
-    abstract class LinDa_Candidato
+    public abstract class LinDa_Candidato
     {
         private int LinDa_matricola;
         private string LinDa_nome;
@@ -14,12 +14,12 @@ namespace LinDa_InfoTest
 
         public int LinDa_Matricola {
             get { return LinDa_matricola; }
-            set { LinDa_matricola = value; }
+            private set { LinDa_matricola = value; }
         }
         public string LinDa_Nome
         {
             get { return LinDa_nome; }
-            set { LinDa_nome = value; }
+            private set { LinDa_nome = value; }
         }
 
         public LinDa_Candidato()
@@ -46,8 +46,6 @@ namespace LinDa_InfoTest
         public abstract bool isIdoneo();
         
         public abstract int punteggio();
-        
-            
-       
+                     
     }
 }
