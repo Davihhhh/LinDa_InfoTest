@@ -11,6 +11,7 @@ namespace LinDa_InfoTest
         private int LinDa_voto;
         private bool LinDa_lode;
 
+
         public int LinDa_Voto
         {
             get { return LinDa_voto; }
@@ -29,12 +30,13 @@ namespace LinDa_InfoTest
                 LinDa_lode = value;
             }
         }
+
+
         public LinDa_Disoccupato() : base()
         {
             LinDa_Voto = 0;
             LinDa_Lode = false;
-        }
-        
+        }    
         public LinDa_Disoccupato(int matricola, string nome, int linDa_voto, bool linDa_lode) : base (matricola, nome)
         {
             LinDa_Voto = linDa_voto;
@@ -55,6 +57,24 @@ namespace LinDa_InfoTest
                 return val + 5;
             else 
                 return val;
+        }
+        public override string ToString()
+        {
+            return base.ToString() + ";" + LinDa_Voto + ";" + LinDa_Lode;
+        }
+        public bool Equals(LinDa_Disoccupato dis)
+        {
+            if (this.LinDa_Lode == dis.LinDa_Lode && this.LinDa_Voto == dis.LinDa_Voto)
+                return base.Equals(dis);
+            else return false;
+        }
+        public override int CompareTo(LinDa_Candidato candidato)
+        {
+            return base.CompareTo(candidato);
+        }
+        public override int HashCode()
+        {
+            return base.HashCode();
         }
     }
 }

@@ -22,6 +22,7 @@ namespace LinDa_InfoTest
             private set { LinDa_nome = value; }
         }
 
+
         public LinDa_Candidato()
         {
             LinDa_Matricola = 0;
@@ -43,9 +44,30 @@ namespace LinDa_InfoTest
             LinDa_Nome = nome;
         }
 
-        public abstract bool isIdoneo();
-        
+
+        public abstract bool isIdoneo();        
         public abstract int punteggio();
-                     
+        public virtual int CompareTo(LinDa_Candidato candidato)
+        {
+            return candidato.punteggio() - this.punteggio();
+        }
+        public virtual int HashCode()
+        {
+            return (LinDa_Matricola, LinDa_Nome).GetHashCode();
+        }                  
+        public override string ToString()
+        {
+            return LinDa_Matricola + ";" + LinDa_Nome;
+        }
+        public bool Equals(LinDa_Candidato cand)
+        {
+            if(cand == null)
+                return false;
+            if (this == cand)
+                return true;
+            if (this.LinDa_Nome == cand.LinDa_Nome && this.LinDa_Matricola == cand.LinDa_Matricola)
+                return true;
+            else return false;
+        }
     }
 }

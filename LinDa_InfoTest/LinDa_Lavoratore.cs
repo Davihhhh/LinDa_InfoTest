@@ -10,6 +10,7 @@ namespace LinDa_InfoTest
     {
         private int LinDa_esperienze;
 
+
         public int LinDa_Esperienze
         {
             get { return LinDa_esperienze; }
@@ -19,6 +20,8 @@ namespace LinDa_InfoTest
                 else throw new Exception();
             }
         }
+
+
         public LinDa_Lavoratore() : base()
         {
             LinDa_Esperienze = 0;
@@ -27,6 +30,8 @@ namespace LinDa_InfoTest
         {
             LinDa_Esperienze = esperienze;
         }
+
+
         public override bool isIdoneo()
         {
             if (punteggio() >= 60)
@@ -37,6 +42,23 @@ namespace LinDa_InfoTest
         {
             return LinDa_Esperienze * 20;
         }
-
+        public override string ToString()
+        {
+            return base.ToString() + ";" + LinDa_Esperienze;
+        }
+        public bool Equals(LinDa_Lavoratore lav)
+        {
+            if (this.LinDa_Esperienze == lav.LinDa_Esperienze)
+                return base.Equals(lav);
+            else return false;
+        }
+        public override int CompareTo(LinDa_Candidato candidato)
+        {
+            return base.CompareTo(candidato);
+        }
+        public override int HashCode()
+        {
+            return base.HashCode();
+        }
     }
 }
